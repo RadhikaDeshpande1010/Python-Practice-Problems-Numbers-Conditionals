@@ -333,7 +333,7 @@ Output:
 
 ---
 
-## Conclusion
+### Conclusion
 
 This repository gathers small, practical Python exercises to build confidence with numbers, loops, and conditional logic. Each problem can be run independently and serves as a step toward mastering core programming fundamentals.
 
