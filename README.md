@@ -221,24 +221,24 @@ Student is passed with average marks of:  55.0
 ```python
 # electricity_bill.py
 
-def bill(units: int) -> float:
-    if units <= 0:
-        return 0.0
-    cost = 0.0
-    slab = min(units, 100)
-    cost += slab * 1.5
-    units -= slab
-    if units > 0:
-        slab = min(units, 100)
-        cost += slab * 2.5
-        units -= slab
-    if units > 0:
-        cost += units * 4.0
-    return cost
+units = int(input("Enter the units:"))
+if units > 0 and units <= 100:
+    result = units * 1.5
+    print(int(result))
+if units > 100 and units <= 200:
+    result = units - 100
+    price = (100*1.5) + result * 2.5
+    print(price) 
+else:
+    result = units - 200
+    price = (100*1.5) + (100*2.5) + result * 4
+    print("Total electricity bill is:",price)
 
-if __name__ == "__main__":
-    u = int(input("Enter units: "))
-    print(int(bill(u)) if bill(u).is_integer() else bill(u))
+User Input:
+Enter the units: 450
+
+Output:
+Total electricity bill is: 1400.0
 ```
 
 **Examples**
@@ -256,12 +256,16 @@ if __name__ == "__main__":
 ```python
 # sum_even_digits.py
 
-def sum_even_digits(n: int) -> int:
-    return sum(int(ch) for ch in str(n) if int(ch) % 2 == 0)
+num = 246135
+str1 = str(num)
+sum = 0
+for i in str1:
+    if (int(i) % 2 == 0):
+        sum = sum + int(i)
+print(sum)
 
-if __name__ == "__main__":
-    num = int(input("Enter a number: "))
-    print(sum_even_digits(num))
+Output:
+12
 ```
 
 ---
@@ -271,19 +275,22 @@ if __name__ == "__main__":
 Maintain the order of non‑zero elements.
 
 ```python
-# move_zeroes.py
+ls = [0, 1, 0, 3, 12]
+ls1 = []
+ls2 = []
+for i in ls:
+    if i == 0:
+        ls1.append(i)
+    else:
+        ls2.append(i)
+print(ls1)
+print(ls2)
+print(ls2 + ls1)
 
-def move_zeroes(nums: list[int]) -> list[int]:
-    write = 0
-    for read in range(len(nums)):
-        if nums[read] != 0:
-            nums[write], nums[read] = nums[read], nums[write]
-            write += 1
-    return nums
-
-if __name__ == "__main__":
-    arr = [0, 1, 0, 3, 12]
-    print(move_zeroes(arr))  # [1, 3, 12, 0, 0]
+Output:
+[0, 0]
+[1, 3, 12]
+[1, 3, 12, 0, 0]
 ```
 
 ---
@@ -302,20 +309,24 @@ if __name__ == "__main__":
 ```python
 # income_tax.py
 
-def simple_tax(income: int) -> int:
-    if income <= 250_000:
-        return 0
-    elif income <= 500_000:
-        return int(income * 0.05)
-    elif income <= 1_000_000:
-        return int(income * 0.20)
-    else:
-        return int(income * 0.30)
+price = int(input("Annual Income:"))
+if price > 0 and price <= 250000:
+    print("No Tax")
+elif price > 250000 and price <= 500000:
+    tax = price * 0.05
+    print(int(tax))
+elif price > 500000 and price <= 1000000:
+    tax = price * 0.2
+    print(int(tax))
+else:
+    tax = price * 0.3
+    print(int(tax))
 
-if __name__ == "__main__":
-    inc = int(input("Annual income (₹): "))
-    tax = simple_tax(inc)
-    print("No Tax" if tax == 0 else tax)
+User Input:
+Annual Income: 400000
+
+Output:
+20000
 ```
 
 ---
