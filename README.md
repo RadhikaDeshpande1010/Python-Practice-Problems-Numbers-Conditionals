@@ -1,4 +1,4 @@
-<h2><sub><img src="https://github.com/RadhikaDeshpande1010/icon-library/blob/main/python-icon/python-icon.png" height="25" width="25"></sub> Python Practice Problems — Numbers & Conditionals </h2>
+<h1><sub><img src="https://github.com/RadhikaDeshpande1010/icon-library/blob/main/python-icon/python-icon.png" height="27" width="27"></sub> Python Practice Problems — Numbers & Conditionals </h1>
 <img src="https://github.com/RadhikaDeshpande1010/Python-Practice-Problems-Numbers-Conditionals/blob/main/Numbers-Conditionals.png">
 
 A collection of beginner‑friendly Python exercises focused on numbers, loops, and conditional logic. Each problem includes a short description, inputs/outputs, and a clean, runnable solution.
@@ -7,7 +7,7 @@ A collection of beginner‑friendly Python exercises focused on numbers, loops, 
 
 ---
 
-## How to Run
+### How to Run
 
 1. **Clone** this repository and open the folder in your editor/terminal.
 2. Run any script directly with Python:
@@ -21,7 +21,7 @@ A collection of beginner‑friendly Python exercises focused on numbers, loops, 
 
 ---
 
-## Contents
+### Contents
 
 * [Q1. Extract digits to a list (in order)](#q1-extract-digits-to-a-list-in-order)
 * [Q2. Armstrong (Narcissistic) number check](#q2-armstrong-narcissistic-number-check)
@@ -36,7 +36,7 @@ A collection of beginner‑friendly Python exercises focused on numbers, loops, 
 
 ---
 
-## Q1. Extract digits to a list (in order)
+### Q1. Extract digits to a list (in order)
 
 **Input:** `78761`
 **Output:** `[7, 8, 7, 6, 1]`
@@ -60,7 +60,7 @@ Output:
 
 ---
 
-## Q2. Armstrong (Narcissistic) number check
+### Q2. Armstrong (Narcissistic) number check
 
 **Task:** Check whether a number equals the sum of its own digits each raised to the power of the number of digits. (For `153`: `1^3 + 5^3 + 3^3 = 153`.)
 
@@ -88,7 +88,7 @@ Armstrong Number
 
 ---
 
-## Q3. Compare counts of even digits in two numbers
+### Q3. Compare counts of even digits in two numbers
 
 Count even **digits** (not whether the whole number is even) and compare.
 
@@ -123,7 +123,7 @@ Even count is not same
 
 ---
 
-## Q4. Unique digits sorted descending
+### Q4. Unique digits sorted descending
 
 From a number, collect unique digits and print them in descending order.
 **Example:** `787615641 → [8, 7, 6, 5, 4, 1, 0?]`
@@ -153,7 +153,7 @@ Output:
 
 ---
 
-## Q5. Loan eligibility checker
+### Q5. Loan eligibility checker
 
 **Rule:** 
 **Age:** `≥ 21`
@@ -182,7 +182,7 @@ Person is eligible for loan
 
 ---
 
-## Q6. Exam result evaluator
+### Q6. Exam result evaluator
 
 **Pass if:** `All three subjects ≥ 40` **and** `average ≥ 50`.
 
@@ -210,7 +210,7 @@ Student is passed with average marks of:  55.0
 
 ---
 
-## Q7. Electricity bill calculator (tiered)
+### Q7. Electricity bill calculator (tiered)
 
 **Rates:**
 
@@ -249,7 +249,7 @@ Total electricity bill is: 1400.0
 
 ---
 
-## Q8. Sum only even digits
+### Q8. Sum only even digits
 
 **Input:** `246135` → **Output:** `2+4+6 = 12`
 
@@ -270,7 +270,7 @@ Output:
 
 ---
 
-## Q9. Move all zeros to the end
+### Q9. Move all zeros to the end
 
 Maintain the order of non‑zero elements.
 
@@ -297,7 +297,7 @@ Output:
 
 ---
 
-## Q10. Income tax calculator (simplified)
+### Q10. Income tax calculator (simplified)
 
 **Brackets:**
 
