@@ -44,19 +44,18 @@ A collection of beginner‑friendly Python exercises focused on numbers, loops, 
 ```python
 # extract_digits.py
 
-def digits_in_order(n: int) -> list[int]:
-    if n == 0:
-        return [0]
-    out = []
-    while n != 0:
-        out.append(n % 10)
-        n //= 10
-    out.reverse()
-    return out
+rem = 0
+list1=[]
+while num1 != 0:
+    rem = num1 % 10
+    list1.append(rem)
+    num1 = num1//10
+list1.reverse()
+print(list1)
+num1 = 5
 
-if __name__ == "__main__":
-    num = int(input("Enter a number: "))
-    print(digits_in_order(num))
+Output:
+[7, 8, 7, 6, 1]
 ```
 
 ---
@@ -68,14 +67,21 @@ if __name__ == "__main__":
 ```python
 # armstrong_number.py
 
-def is_armstrong(n: int) -> bool:
-    s = str(n)
-    p = len(s)
-    return sum(int(ch) ** p for ch in s) == n
+num1 = 153
+sum = 0
+num2 = num1
+while num1 != 0:
+    rem = num1 % 10
+    sum = sum + (rem**3)
+    num1 = num1//10
+print(sum)
+if sum == num2:
+    print("Armstrong Number")
+else:
+    print("Not an Armstrong Number")
 
-if __name__ == "__main__":
-    num = int(input("Enter a number: "))
-    print("Armstrong Number" if is_armstrong(num) else "Not an Armstrong Number")
+Output:
+Armstrong Number
 ```
 
 > Your original code called this a **Corrosion number**; the standard term is **Armstrong** (or **Narcissistic**) number.
@@ -89,24 +95,30 @@ Count even **digits** (not whether the whole number is even) and compare.
 ```python
 # compare_even_digit_counts.py
 
-def even_digit_count(n: int) -> int:
-    if n == 0:
-        return 1  # digit '0' is even
-    cnt = 0
-    while n != 0:
-        d = n % 10
-        if d % 2 == 0:
-            cnt += 1
-        n //= 10
-    return cnt
+num1 = 567
+num2 = 234
+even_count = 0
+even_count1 = 0
+while num1 != 0:
+    if num1 % 2 == 0:
+        even_count = even_count + 1
+    num1 = num1//10
+while num2 != 0:
+    if num2 % 2 == 0:
+        even_count1 = even_count1 + 1
+    num2 = num2//10
+print("even count for num1: ",even_count)
+print("even count for num2: ",even_count1)
 
-if __name__ == "__main__":
-    a = int(input("Enter first number: "))
-    b = int(input("Enter second number: "))
-    c1, c2 = even_digit_count(a), even_digit_count(b)
-    print("Even digits in first:", c1)
-    print("Even digits in second:", c2)
-    print("Even count is same" if c1 == c2 else "Even count is not same")
+if even_count == even_count1:
+    print("Even count is same")
+else:
+    print("Even count is not same")
+
+Output:
+even count for num1:  1
+even count for num2:  2
+Even count is not same
 ```
 
 ---
@@ -119,57 +131,81 @@ From a number, collect unique digits and print them in descending order.
 ```python
 # unique_sorted_digits_desc.py
 
-def unique_desc_digits(n: int) -> list[int]:
-    digits = set(int(ch) for ch in str(n))
-    return sorted(digits, reverse=True)
+num1 = 787615641
+coun1 = 0
+list1 = []
+while num1 != 0:
+    rem = num1 % 10 # 1
+    list1.append(rem)
+    num1 = num1 // 10
+print(list1)
+list2 = []
+for i in list1:
+    if i not in list2:
+        list2.append(i)
+list2.sort(reverse=True)
+print(list2)
 
-if __name__ == "__main__":
-    num = int(input("Enter a number: "))
-    print(unique_desc_digits(num))
+Output:
+[1, 4, 6, 5, 1, 6, 7, 8, 7]
+[8, 7, 6, 5, 4, 1]
 ```
 
 ---
 
 ## Q5. Loan eligibility checker
 
-**Rule:** Age ≥ 21, employed, and credit score > 650.
+**Rule:** 
+**Age:** `≥ 21`
+**Employed:** `boolean`
+**Credit Score:** `> 650`.
 
 ```python
 # loan_eligibility.py
 
-def parse_bool(s: str) -> bool:
-    return s.strip().lower() in {"true", "t", "yes", "y", "1"}
+age = int(input("Enter Age: "))
+employed = input("Enter Empolyed: ")
+credit_score = int(input("Enter Credit Score: "))
+if (age > 21 and employed == 'true' and credit_score > 650):
+    print("Person is eligible for loan")
+else:
+    print("Person is not eligible for loan")
 
-def eligible(age: int, employed: bool, credit_score: int) -> bool:
-    return age >= 21 and employed and credit_score > 650
+User Input:
+Enter Age:  26
+Enter Empolyed:  true
+Enter Credit Score:  670
 
-if __name__ == "__main__":
-    age = int(input("Enter Age: "))
-    employed = parse_bool(input("Employed (true/false): "))
-    score = int(input("Enter Credit Score: "))
-    print("Eligible for Loan" if eligible(age, employed, score) else "Not Eligible for Loan")
+Output:
+Person is eligible for loan
 ```
 
 ---
 
 ## Q6. Exam result evaluator
 
-**Pass if:** All three subjects ≥ 40 **and** average ≥ 50.
+**Pass if:** `All three subjects ≥ 40` **and** `average ≥ 50`.
 
 ```python
 # exam_result.py
 
-def evaluate(s1: int, s2: int, s3: int) -> tuple[str, float]:
-    avg = (s1 + s2 + s3) / 3
-    ok = all(x >= 40 for x in (s1, s2, s3)) and avg >= 50
-    return ("Pass", avg) if ok else ("Fail", avg)
+subject1 = int(input("Enter marks of subject1: "))
+subject2 = int(input("Enter marks of subject2: "))
+subject3 = int(input("Enter marks of subject3: "))
+average = 0
+if subject1 >= 40 and subject2 >= 40 and subject3 >= 40:
+    average = (subject1 + subject2 + subject3) / 3
+    print("Student is passed with average marks of: ",average)
+else:
+    print("Student is failed with average marks of: ",average)
 
-if __name__ == "__main__":
-    s1 = int(input("Subject 1: "))
-    s2 = int(input("Subject 2: "))
-    s3 = int(input("Subject 3: "))
-    status, avg = evaluate(s1, s2, s3)
-    print(status, "with average:", avg)
+User Input:
+Enter marks of subject1:  45
+Enter marks of subject2:  62
+Enter marks of subject3:  58
+
+Output:
+Student is passed with average marks of:  55.0
 ```
 
 ---
