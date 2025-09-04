@@ -1,5 +1,5 @@
 <h2><sub><img src="https://github.com/RadhikaDeshpande1010/icon-library/blob/main/python-icon/python-icon.png" height="25" width="25"></sub> Python Practice Problems — Numbers & Conditionals </h2>
-<img src="https://github.com/RadhikaDeshpande1010/Python-Conditions-and-If-statements/blob/main/If%20and%20Conditions.png">
+<img src="https://github.com/RadhikaDeshpande1010/Python-Practice-Problems-Numbers-Conditionals/blob/main/Numbers-Conditionals.png">
 
 A collection of beginner‑friendly Python exercises focused on numbers, loops, and conditional logic. Each problem includes a short description, inputs/outputs, and a clean, runnable solution.
 
